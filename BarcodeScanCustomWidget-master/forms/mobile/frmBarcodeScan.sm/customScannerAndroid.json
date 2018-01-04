@@ -1,0 +1,116 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizCustom",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "293dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "2%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "71dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "96%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 0,
+    "customProperties": {
+        "autoFocusEnabled": true,
+        "borderColor": "#1AA4D7",
+        "borderLength": 80,
+        "flashEnabled": false,
+        "ide_scanResultCallback": "AS_TPW_d525df10e188464397520e9dbd14c0ab",
+        "laserColor": "#FC6621",
+        "maskColor": "#60000000",
+        "textColor": "#7CB621",
+        "textSize": 10,
+        "tradeMarkText": "Kony!"
+    },
+    "cwApi": {
+        "startCamera": {
+            "returnType": "void"
+        }
+    },
+    "cwEvents": [
+        "scanResultCallback"
+    ],
+    "cwid": "jsRCCustomWidget110255693614",
+    "desktopweb": {
+        "render": false
+    },
+    "id": "customScannerAndroid",
+    "info": null,
+    "ipad": {
+        "render": false
+    },
+    "iphone": {
+        "render": false
+    },
+    "isvisible": true,
+    "kiosk": {
+        "render": false
+    },
+    "kuid": "6e544f5f3df24e9e92a6d8d317aa9a1e",
+    "name": "barcodescanner-customWidget",
+    "nameSpaceIndex": 0,
+    "parent": "frmBarcodeScan",
+    "pf": "frmBarcodeScan",
+    "platformKey": "android",
+    "spaan": {
+        "render": false
+    },
+    "spaandroidtablet": {
+        "render": false
+    },
+    "spabb": {
+        "render": false
+    },
+    "spaip": {
+        "render": false
+    },
+    "spaipad": {
+        "render": false
+    },
+    "spawindowstablet": {
+        "render": false
+    },
+    "spawinphone8": {
+        "render": false
+    },
+    "wType": "TPW",
+    "watchos": {
+        "render": false
+    },
+    "widgetIndex": 0,
+    "windows10": {
+        "render": false
+    },
+    "windows8": {
+        "render": false
+    },
+    "winphone10": {
+        "render": false
+    },
+    "winphone8": {
+        "render": false
+    },
+    "zindex": 1
+}

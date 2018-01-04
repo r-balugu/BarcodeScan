@@ -1,0 +1,96 @@
+//Android Gradle build Script:Start
+import org.apache.tools.ant.taskdefs.condition.Os
+import java.util.regex.Pattern
+buildscript {
+    repositories {
+		//Gradle External Repositories
+        jcenter()
+    }
+    dependencies {
+		//Gradle Build External Dependencies
+        classpath 'com.android.tools.build:gradle:2.2.3'
+    }
+}
+apply plugin: 'com.android.application'
+
+def doExtractStringFromManifest(name) {
+     def manifestFile = file(android.sourceSets.main.manifest.srcFile)
+     def pattern = Pattern.compile(name + "=\"(\\S+)\"")
+     def matcher = pattern.matcher(manifestFile.getText())
+     matcher.find()
+     return matcher.group(1)
+}
+
+dependencies {
+	//Android Project Dependencies :Start
+	
+	
+	compile 'com.android.support:multidex:1.0.0'
+    compile 'com.android.support:recyclerview-v7:23.3.0'
+    compile fileTree(dir: 'libs', include:[ '*.jar'])
+    compile 'me.dm7.barcodescanner:zxing:1.9'
+	//Android Project Dependencies :End
+}
+
+fileTree(dir: 'libs', include: '**/*.aar')
+        .each { File file ->
+    dependencies.add("compile", [name: file.name.lastIndexOf('.').with { it != -1 ? file.name[0..<it] : file.name }, ext: 'aar'])
+}
+
+android {
+	//Android build options:Start
+	compileSdkVersion 'android-23'
+    buildToolsVersion '22.0.1'
+	useLibrary 'org.apache.http.legacy'
+	packagingOptions {
+		//Project packaging options:Start
+		exclude 'META-INF/DEPENDENCIES'
+		exclude 'META-INF/LICENSE'
+		exclude 'META-INF/LICENSE.txt'
+		exclude 'META-INF/license.txt'
+		exclude 'META-INF/NOTICE'
+		exclude 'META-INF/NOTICE.txt'
+		exclude 'META-INF/notice.txt'
+		exclude 'META-INF/ASL2.0'
+		exclude 'MANIFEST.MF'
+		//Project packaging options:End
+	}	
+    defaultConfig {
+		//Project Default Config:Start
+        multiDexEnabled true
+        sourceSets.main {
+			//Project folder mapping:Start
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jni.srcDirs = [] //disable automatic ndk-build call
+            jniLibs.srcDir 'libs' //set .so files location to libs
+			//Project folder mapping:End
+        }
+		dexOptions { 
+		//Dexing Options:Start
+		javaMaxHeapSize "2048M"
+		//Dexing Options:End
+		}
+		renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true
+		applicationId = doExtractStringFromManifest("package")
+		//Project Default Config:End
+    }
+	//Android build options:End
+}
+allprojects {
+    repositories {
+		//Gradle Build Depencency Repositories
+        jcenter()
+        flatDir { 
+			dirs 'libs'
+        }		
+    }
+}
+
+//Android Gradle build Script:End

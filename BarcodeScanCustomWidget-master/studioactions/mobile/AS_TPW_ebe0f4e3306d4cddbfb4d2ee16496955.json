@@ -1,0 +1,30 @@
+{
+    "AS_TPW_ebe0f4e3306d4cddbfb4d2ee16496955": {
+        "id": "AS_TPW_ebe0f4e3306d4cddbfb4d2ee16496955",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmBarcodeScan",
+            "type": "forms",
+            "platform": "",
+            "KUID": "0b7e6de1953442a490b8364305c2e466"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION___7f2cf8ca8cfd481cbae3a395fcdcb985",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "scanResults",
+            "display": "scanResults",
+            "inputparams": [{
+                "name": "scanResult",
+                "value": " eventobject"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null
+        }]
+    }
+}

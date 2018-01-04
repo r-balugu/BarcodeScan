@@ -1,0 +1,106 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizCustom",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_height_": {
+        "type": "string",
+        "value": "265dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "65dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "55dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "90%"
+    },
+    "android": {
+        "render": false
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 0,
+    "customProperties": {
+        "ide_scanResult": "AS_TPW_8b880914f42d44a79c50f679ace06426"
+    },
+    "cwEvents": [
+        "scanResult"
+    ],
+    "cwid": "jsRCCustomWidget110255693615",
+    "desktopweb": {
+        "render": false
+    },
+    "id": "customScanneriOS",
+    "info": null,
+    "isvisible": true,
+    "kiosk": {
+        "render": false
+    },
+    "kuid": "157a81cf945440b4976fc379a687ccb1",
+    "name": "barcodescanner-customWidgets",
+    "nameSpaceIndex": 0,
+    "parent": "frmBarcodeScan",
+    "pf": "frmBarcodeScan",
+    "platformKey": "ios",
+    "spaan": {
+        "render": false
+    },
+    "spaandroidtablet": {
+        "render": false
+    },
+    "spabb": {
+        "render": false
+    },
+    "spaip": {
+        "render": false
+    },
+    "spaipad": {
+        "render": false
+    },
+    "spawindowstablet": {
+        "render": false
+    },
+    "spawinphone8": {
+        "render": false
+    },
+    "tabrcandroid": {
+        "render": false
+    },
+    "wType": "TPW",
+    "watchos": {
+        "render": false
+    },
+    "widgetIndex": 0,
+    "windows10": {
+        "render": false
+    },
+    "windows8": {
+        "render": false
+    },
+    "winphone10": {
+        "render": false
+    },
+    "winphone8": {
+        "render": false
+    },
+    "zindex": 1
+}
